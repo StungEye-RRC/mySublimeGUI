@@ -29,11 +29,4 @@ public:
 	ofxFloatSlider squareWidth;
 	ofxColorSlider squareColor;
 	ofxVec2Slider squareCenter;
-
-	// App where a circle and a square are displayed on the canvas.
-	// You have gui widgets to control the:
-	//   - Color
-	//   - Size
-	//   - Position
-	// Of both the circle and the square.
 };
