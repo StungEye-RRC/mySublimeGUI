@@ -3,18 +3,21 @@
 //--------------------------------------------------------------
 void ofApp::setup() {
 	gui.setup(); // most of the time you don't need a name
-	gui.add(circleRadius.setup("circle radius", 140, 10, 300));
+	gui.add(circleRadius.setup("Circle radius", 140, 10, 300));
 	gui.add(
-		circleCenter.setup("circle center", {ofGetWidth() * .25, ofGetHeight() * .5}, {0, 0},
+		circleCenter.setup("Circle center", {ofGetWidth() * .25, ofGetHeight() * .5}, {0, 0},
 		                   {ofGetWidth(), ofGetHeight()}));
-	gui.add(circleColor.setup("circle color", ofColor(100, 100, 140), ofColor(0, 0), ofColor(255, 255)));
-	gui.add(squareWidth.setup("square size", 280, 10, 600));
+	gui.add(circleColor.setup("Circle color", ofColor(100, 100, 140), ofColor(0, 0), ofColor(255, 255)));
+	gui.add(squareWidth.setup("Square size", 280, 10, 600));
 	gui.add(
-		squareCenter.setup("square center", {ofGetWidth() - ofGetWidth() * .25, ofGetHeight() * .5}, {0, 0},
+		squareCenter.setup("Square center", {ofGetWidth() - ofGetWidth() * .25, ofGetHeight() * .5}, {0, 0},
 		                   {ofGetWidth(), ofGetHeight()}));
-	gui.add(squareColor.setup("square color", ofColor(90, 130, 115), ofColor(0, 0), ofColor(255, 255)));
+	gui.add(squareColor.setup("Square color", ofColor(90, 130, 115), ofColor(0, 0), ofColor(255, 255)));
 
+	// This makes the circles nice and smooth.
 	ofSetCircleResolution(60);
+
+	// Let's position rectangle using their center position, not the top left corner.
 	ofSetRectMode(OF_RECTMODE_CENTER);
 }
 
